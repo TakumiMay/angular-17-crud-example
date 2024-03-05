@@ -1,0 +1,138 @@
+{
+  "stats": {
+    "suites": 1,
+    "tests": 1,
+    "passes": 1,
+    "pending": 0,
+    "failures": 0,
+    "start": "2024-03-05T19:51:00.155Z",
+    "end": "2024-03-05T19:51:10.275Z",
+    "duration": 10120,
+    "testsRegistered": 1,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false
+  },
+  "results": [
+    {
+      "uuid": "4d7f48eb-6c04-4c6e-b21a-68ce0dbd0856",
+      "title": "",
+      "fullFile": "C:\\Users\\MTAMURA\\Downloads\\angular-17-crud-example\\test\\homeScript.spec.js",
+      "file": "\\test\\homeScript.spec.js",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "8762a698-c9f0-4408-b774-5349e4cd95b8",
+          "title": "home page",
+          "fullFile": "C:\\Users\\MTAMURA\\Downloads\\angular-17-crud-example\\test\\homeScript.spec.js",
+          "file": "\\test\\homeScript.spec.js",
+          "beforeHooks": [
+            {
+              "title": "\"before all\" hook in \"home page\"",
+              "fullTitle": "home page \"before all\" hook in \"home page\"",
+              "timedOut": false,
+              "duration": 7711,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Set up EdgeOptions\nconst options = new EdgeOptions();\noptions.excludeSwitches('enable-logging');\n// Set up Selenium WebDriver\ndriver = await new Builder()\n  .forBrowser('MicrosoftEdge')\n  .setEdgeOptions(options)\n  .build();",
+              "err": {},
+              "uuid": "89247821-dae9-45fe-ae60-155bd10b9c2a",
+              "parentUUID": "8762a698-c9f0-4408-b774-5349e4cd95b8",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "afterHooks": [
+            {
+              "title": "\"after all\" hook in \"home page\"",
+              "fullTitle": "home page \"after all\" hook in \"home page\"",
+              "timedOut": false,
+              "duration": 74,
+              "state": null,
+              "speed": null,
+              "pass": false,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "// Clean up Selenium WebDriver after all tests are done\nawait driver.quit();",
+              "err": {},
+              "uuid": "69c1ae7a-4ef6-46d7-a3d0-a78f97ea7674",
+              "parentUUID": "8762a698-c9f0-4408-b774-5349e4cd95b8",
+              "isHook": true,
+              "skipped": false
+            }
+          ],
+          "tests": [
+            {
+              "title": "add a tutorial",
+              "fullTitle": "home page add a tutorial",
+              "timedOut": false,
+              "duration": 2329,
+              "state": "passed",
+              "speed": "slow",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "try {\n    await driver.get('http://localhost:8081/tutorials');\n    const title = await driver.getTitle();\n    assert.equal(title, 'Angular17Crud', 'Page title is not \"Angular17Crud\"');\n    \n    // Set implicit wait\n    await driver.manage().setTimeouts({ implicit: 500 });\n    await driver.findElement(By.css('.btn.btn-sm.btn-danger')).click();\n    await driver.findElement(By.xpath(\"//a[contains(text(),'Add')]\")).click();\n    const currentUrl = await driver.getCurrentUrl();\n    assert.equal(currentUrl, 'http://localhost:8081/add', 'Page url is not \"localhost:8081/add\"');\n    \n    const titleBox = await driver.findElement(By.name('title'));\n    const descBox = await driver.findElement(By.name('description'));\n    await titleBox.sendKeys('New tutorial title');\n    await descBox.sendKeys('New tutorial description');\n    await driver.findElement(By.css('button.btn.btn-success')).click();\n    const successMessage = await driver.findElement(By.xpath(\"//h4[contains(text(),'Tutorial was submitted successfully!')]\"));\n    assert.ok(successMessage);\n    \n    await driver.findElement(By.xpath(\"//a[contains(text(),'Tutorials')]\")).click();\n    const searchInput = await driver.findElement(By.css('input[placeholder=\"Search by title\"]'));\n    await searchInput.clear();\n    await searchInput.sendKeys('New tutorial title');\n    await driver.findElement(By.css('.btn.btn-outline-secondary')).click();\n    const tutorialsListTitle = await driver.findElement(By.xpath(\"//h4[contains(text(),'Tutorials List')]\"));\n    assert.ok(tutorialsListTitle);\n\n    await driver.findElement(By.xpath(\"//li[contains(text(),'New tutorial title')]\")).click();\n    const descriptionElement = await driver.findElement(By.xpath(\"//div[contains(text(), 'New tutorial description')]\"));\n    const descriptionText = await descriptionElement.getText();\n    assert.ok(descriptionText.trim().length > 0, 'Text content is empty');\n    assert(descriptionText.includes('New tutorial description'), `Description does not contain expected text: ${'New tutorial description'}`);\n} catch (error) {\n    console.error('Error:', error);\n}",
+              "err": {},
+              "uuid": "a51b97c4-fdcb-41e6-b17e-098e2d5d855c",
+              "parentUUID": "8762a698-c9f0-4408-b774-5349e4cd95b8",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "a51b97c4-fdcb-41e6-b17e-098e2d5d855c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 2329,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 15000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 15000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "10.3.0"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": true,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": null,
+      "version": "6.2.0"
+    }
+  }
+}

@@ -1,5 +1,5 @@
 const assert = require('assert');
-const { Builder, By, Key, until } = require('selenium-webdriver');
+const { Builder, By } = require('selenium-webdriver');
 const { Options: EdgeOptions } = require('selenium-webdriver/edge');
 
 describe('home page', function() {
