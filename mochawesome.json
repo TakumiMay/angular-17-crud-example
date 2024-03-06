@@ -1,0 +1,163 @@
+{
+  "stats": {
+    "suites": 2,
+    "tests": 2,
+    "passes": 2,
+    "pending": 0,
+    "failures": 0,
+    "testsRegistered": 2,
+    "passPercent": 100,
+    "pendingPercent": 0,
+    "other": 0,
+    "hasOther": false,
+    "skipped": 0,
+    "hasSkipped": false,
+    "start": "2024-03-06T16:52:10.228Z",
+    "end": "2024-03-06T16:56:41.468Z",
+    "duration": 271240
+  },
+  "results": [
+    {
+      "uuid": "133eb1fd-9f36-4332-bafe-af8f24b3af27",
+      "title": "",
+      "fullFile": "cypress\\e2e\\home.cy.ts",
+      "file": "cypress\\e2e\\home.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "2065e619-2fbf-4586-a4da-0d7bea91b412",
+          "title": "home page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "add a tutorial",
+              "fullTitle": "home page add a tutorial",
+              "timedOut": null,
+              "duration": 5226,
+              "state": "passed",
+              "speed": "medium",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:8081/tutorials');\ncy.title().should('equal', 'Angular17Crud');\ncy.get('.btn.btn-sm.btn-danger').click();\ncy.get(\"a.nav-link\").eq(1).click();\ncy.url().should('equal', 'http://localhost:8081/add');\ncy.get('#title').clear().type('New tutorial title');\ncy.get('#description').clear().type('New tutorial description');\ncy.get('button.btn.btn-success').click();\ncy.get(\"h4\").contains(\"Tutorial was submitted successfully!\");\ncy.get(\"a.nav-link\").eq(0).click();\ncy.get('input[placeholder=\"Search by title\"]').type('New tutorial title');\ncy.get('.btn.btn-outline-secondary').click();\ncy.get(\"h4\").contains(\"Tutorials List\");\ncy.get('li.list-group-item').contains('New tutorial title').click();\ncy.get('div').contains('label', 'Description:').parent().contains('New tutorial description');",
+              "err": {},
+              "uuid": "d050d2d0-9c8e-4da7-92a8-22c74ade7b96",
+              "parentUUID": "2065e619-2fbf-4586-a4da-0d7bea91b412",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "d050d2d0-9c8e-4da7-92a8-22c74ade7b96"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 5226,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    },
+    {
+      "uuid": "e43f7fdb-5149-4db5-90ed-31c8d3112a56",
+      "title": "",
+      "fullFile": "cypress\\e2e\\home.cy.ts",
+      "file": "cypress\\e2e\\home.cy.ts",
+      "beforeHooks": [],
+      "afterHooks": [],
+      "tests": [],
+      "suites": [
+        {
+          "uuid": "872af7f9-67a2-4248-84aa-46b3e9f2af67",
+          "title": "home page",
+          "fullFile": "",
+          "file": "",
+          "beforeHooks": [],
+          "afterHooks": [],
+          "tests": [
+            {
+              "title": "add a tutorial",
+              "fullTitle": "home page add a tutorial",
+              "timedOut": null,
+              "duration": 3359,
+              "state": "passed",
+              "speed": "fast",
+              "pass": true,
+              "fail": false,
+              "pending": false,
+              "context": null,
+              "code": "cy.visit('http://localhost:8081/tutorials');\ncy.title().should('equal', 'Angular17Crud');\ncy.get('.btn.btn-sm.btn-danger').click();\ncy.get(\"a.nav-link\").eq(1).click();\ncy.url().should('equal', 'http://localhost:8081/add');\ncy.get('#title').clear().type('New tutorial title');\ncy.get('#description').clear().type('New tutorial description');\ncy.get('button.btn.btn-success').click();\ncy.get(\"h4\").contains(\"Tutorial was submitted successfully!\");\ncy.get(\"a.nav-link\").eq(0).click();\ncy.get('input[placeholder=\"Search by title\"]').type('New tutorial title');\ncy.get('.btn.btn-outline-secondary').click();\ncy.get(\"h4\").contains(\"Tutorials List\");\ncy.get('li.list-group-item').contains('New tutorial title').click();\ncy.get('div').contains('label', 'Description:').parent().contains('New tutorial description');",
+              "err": {},
+              "uuid": "e4035dbb-ef54-4ba3-ba56-8665f2c48a6c",
+              "parentUUID": "872af7f9-67a2-4248-84aa-46b3e9f2af67",
+              "isHook": false,
+              "skipped": false
+            }
+          ],
+          "suites": [],
+          "passes": [
+            "e4035dbb-ef54-4ba3-ba56-8665f2c48a6c"
+          ],
+          "failures": [],
+          "pending": [],
+          "skipped": [],
+          "duration": 3359,
+          "root": false,
+          "rootEmpty": false,
+          "_timeout": 2000
+        }
+      ],
+      "passes": [],
+      "failures": [],
+      "pending": [],
+      "skipped": [],
+      "duration": 0,
+      "root": true,
+      "rootEmpty": true,
+      "_timeout": 2000
+    }
+  ],
+  "meta": {
+    "mocha": {
+      "version": "7.0.1"
+    },
+    "mochawesome": {
+      "options": {
+        "quiet": false,
+        "reportFilename": "mochawesome",
+        "saveHtml": false,
+        "saveJson": true,
+        "consoleReporter": "spec",
+        "useInlineDiffs": false,
+        "code": true
+      },
+      "version": "7.1.3"
+    },
+    "marge": {
+      "options": {
+        "reportDir": "cypress/results",
+        "overwrite": false,
+        "html": false,
+        "json": true
+      },
+      "version": "6.2.0"
+    }
+  }
+}
