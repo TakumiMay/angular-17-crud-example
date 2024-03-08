@@ -1,0 +1,125 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<robot generator="Robot 7.0 (Python 3.12.2 on win32)" generated="2024-03-08T09:42:42.361162" rpa="false" schemaversion="5">
+<suite id="s1" name="homeScript" source="C:\Users\MTAMURA\Downloads\angular-17-crud-example\test\homeScript.robot">
+<test id="s1-t1" name="Add Tutorial Test" line="10">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2024-03-08T09:42:43.765346" level="INFO">Opening browser 'Edge' to base url 'http://localhost:8081'.</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<arg>executable_path=${EDGE_DRIVER_PATH}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2024-03-08T09:42:43.765346" elapsed="7.951793"/>
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2024-03-08T09:42:51.717870" elapsed="0.136981"/>
+</kw>
+<kw name="Title Should Be" owner="SeleniumLibrary">
+<msg time="2024-03-08T09:42:51.864682" level="INFO">Page title is 'Angular17Crud'.</msg>
+<arg>Angular17Crud</arg>
+<doc>Verifies that the current page title equals ``title``.</doc>
+<status status="PASS" start="2024-03-08T09:42:51.855990" elapsed="0.008692"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-08T09:42:51.865682" level="INFO">Clicking element 'css=.btn.btn-sm.btn-danger'.</msg>
+<arg>css=.btn.btn-sm.btn-danger</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-08T09:42:51.865682" elapsed="0.088638"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-08T09:42:51.955819" level="INFO">Clicking element 'xpath=//a[contains(text(),'Add')]'.</msg>
+<arg>xpath=//a[contains(text(),'Add')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-08T09:42:51.955319" elapsed="0.119032"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>name=title</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-08T09:42:52.075199" elapsed="0.029466"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-08T09:42:52.106379" level="INFO">Typing text 'New tutorial title' into text field 'name=title'.</msg>
+<arg>name=title</arg>
+<arg>New tutorial title</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-08T09:42:52.105879" elapsed="0.188600"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-08T09:42:52.295426" level="INFO">Typing text 'New tutorial description' into text field 'name=description'.</msg>
+<arg>name=description</arg>
+<arg>New tutorial description</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-08T09:42:52.295426" elapsed="0.160584"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-08T09:42:52.459119" level="INFO">Clicking element 'css=button.btn.btn-success'.</msg>
+<arg>css=button.btn.btn-success</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-08T09:42:52.457732" elapsed="0.078031"/>
+</kw>
+<kw name="Wait Until Page Contains">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//*[contains(text(),'${text}')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-08T09:42:52.538356" elapsed="0.027371"/>
+</kw>
+<arg>Tutorial was submitted successfully!</arg>
+<status status="PASS" start="2024-03-08T09:42:52.537857" elapsed="0.028876"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-08T09:42:52.568722" level="INFO">Clicking element 'xpath=//a[contains(text(),'Tutorials')]'.</msg>
+<arg>xpath=//a[contains(text(),'Tutorials')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-08T09:42:52.567723" elapsed="0.092772"/>
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2024-03-08T09:42:52.661292" level="INFO">Typing text 'New tutorial title' into text field 'css=input[placeholder="Search by title"]'.</msg>
+<arg>css=input[placeholder="Search by title"]</arg>
+<arg>New tutorial title</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-08T09:42:52.661292" elapsed="0.167552"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-08T09:42:52.830187" level="INFO">Clicking element 'css=.btn.btn-outline-secondary'.</msg>
+<arg>css=.btn.btn-outline-secondary</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-08T09:42:52.830187" elapsed="0.081526"/>
+</kw>
+<kw name="Wait Until Page Contains">
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//*[contains(text(),'${text}')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-08T09:42:52.913720" elapsed="0.023449"/>
+</kw>
+<arg>Tutorials List</arg>
+<status status="PASS" start="2024-03-08T09:42:52.912718" elapsed="0.024952"/>
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2024-03-08T09:42:52.938680" level="INFO">Clicking element 'xpath=//li[contains(text(),'New tutorial title')]'.</msg>
+<arg>xpath=//li[contains(text(),'New tutorial title')]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2024-03-08T09:42:52.938680" elapsed="0.088965"/>
+</kw>
+<kw name="Wait Until Page Contains Element" owner="SeleniumLibrary">
+<arg>xpath=//div[contains(text(), 'New tutorial description')]</arg>
+<doc>Waits until the element ``locator`` appears on the current page.</doc>
+<status status="PASS" start="2024-03-08T09:42:53.028264" elapsed="0.019797"/>
+</kw>
+<doc>Test to add a new tutorial</doc>
+<status status="PASS" start="2024-03-08T09:42:43.763423" elapsed="9.286635"/>
+</test>
+<status status="PASS" start="2024-03-08T09:42:42.370768" elapsed="10.681286"/>
+</suite>
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat pass="1" fail="0" skip="0" id="s1" name="homeScript">homeScript</stat>
+</suite>
+</statistics>
+<errors>
+</errors>
+</robot>
